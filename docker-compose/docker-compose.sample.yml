@@ -23,7 +23,7 @@ services:
       - phpfpm
 
   db:
-    image: mysql:5.7
+    image: mariadb:10.4
     ports:
       - 3306:3306
     environment:
@@ -35,7 +35,7 @@ services:
       - dbdata:/var/lib/mysql
 
   node:
-    image: modestcoders/node-php:node8-php7.1
+    image: modestcoders/node-php:node8-php7.4
     ports:
       - 35729:35729
     volumes: *appvolumes
