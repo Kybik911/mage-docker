@@ -13,6 +13,7 @@ services:
     depends_on:
       - db
       - elasticsearch
+      - redis
 
   nginx:
     image: modestcoders/nginx:1.13
@@ -43,7 +44,7 @@ services:
       - phpfpm
 
   elasticsearch:
-    image: modestcoders/elasticsearch:6.5
+    image: ruslandovnar/elasticsearch:7.10
     environment:
       - discovery.type=single-node
     volumes:
@@ -58,8 +59,6 @@ services:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
       - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
-    depends_on:
-      - phpfpm
 volumes:
   dbdata:
   sockdata:
