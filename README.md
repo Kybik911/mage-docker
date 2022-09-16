@@ -80,7 +80,7 @@ Follow the installation steps for your system.
 1. Clone this repo
 
     ```
-    git clone [https://github.com/RusDovOnilab/dockergento-upd.git](https://github.com/Kybik911/mage-docker.git)
+    git clone https://github.com/Kybik911/mage-docker.git
     ```
 
 2. Add `mage` bin into your `$PATH`
