@@ -1,4 +1,4 @@
-# Magento 2 Dockergento
+# Magento 2 MageDocker
 
 Plug and play Magento 2 dev environments with docker. **Fastest performance ever** on Mac and Linux.
 
@@ -6,13 +6,9 @@ Plug and play Magento 2 dev environments with docker. **Fastest performance ever
 
 #### Up to 7x faster development experience on Mac compare to standard docker setups.
 
-<a href="https://www.youtube.com/watch?v=qdUBuDCzHaA&list=PLBt8dizedSZBhcjTL8SM2PS2HEy0mFf5F" target="_blank">
-  <img src="docs/img/benchmark_comparison_video.png" alt="Dockergento speed comparison" width="320" height="180" border="5" />
-</a>
-
 #### Check out all benchmarks
 
-* [Benchmarks: Dockergento vs Standard Docker](docs/benchmarks.md)
+* [Benchmarks: MageDocker vs Standard Docker](docs/benchmarks.md)
 
 #### Learn more about how that is achieved
 
@@ -20,11 +16,11 @@ Plug and play Magento 2 dev environments with docker. **Fastest performance ever
 
 ---
 
-## What is dockergento?
+## What is MageDocker?
 
-Dockergento is just a bash script ready to use in Linux and Mac to be able to use docker with best native performance.
+MageDocker is just a bash script ready to use in Linux and Mac to be able to use docker with best native performance.
 
-While performance might no be a problem for Linux, using this tool is the only way you can overcome performance issues on Mac. Dockergento allows you to have different configuration for each system while using the same workflow. So your whole team can work the same way no matter which computer they are using. It just works!
+While performance might no be a problem for Linux, using this tool is the only way you can overcome performance issues on Mac. MageDocker allows you to have different configuration for each system while using the same workflow. So your whole team can work the same way no matter which computer they are using. It just works!
 
 ## Supported Systems
 
@@ -43,7 +39,7 @@ If you do not like reading and prefer watching videos. Check out all video tutor
 
 ## Installation
 
-You only need 3 things on your local machine: `git`, `docker` and `dockergento`
+You only need 3 things on your local machine: `git`, `docker` and `mage`
 
 ### Install Docker
 
@@ -79,25 +75,25 @@ Follow the installation steps for your system.
 
 </details>
 
-### Install dockergento console
+### Install MageDocker console
 
 1. Clone this repo
 
     ```
-    git clone https://github.com/RusDovOnilab/dockergento-upd.git
+    git clone [https://github.com/RusDovOnilab/dockergento-upd.git](https://github.com/Kybik911/mage-docker.git)
     ```
 
-2. Add `dockergento` bin into your `$PATH`
+2. Add `mage` bin into your `$PATH`
 
     ```
-    sudo ln -s $(pwd)/dockergento-upd/bin/dockergento /usr/local/bin/
+    sudo ln -s $(pwd)/mage-docker/bin/mage /usr/local/bin/
     ```
     
-3. Open a new terminal tab/window and check that `dockergento` works
+3. Open a new terminal tab/window and check that `mage` works
 
 	```
-	which dockergento
-	dockergento
+	which mage
+	mage
 	```
 
 </details>
@@ -111,15 +107,15 @@ Depending the type of project, you can use one of the following setups:
 
 ```
 cd <your_project>
-dockergento setup
+mage setup
 ```
 
 ### New project
 
 ```
 mkdir <new_project_name> && cd <new_project_name>
-dockergento setup
-dockergento create-project
+mage setup
+mage create-project
 ```
 
 ### Magento 2 github for contribution
@@ -149,14 +145,14 @@ dockergento create-project
 3. Mirror not synced folders before executing composer the first time
 
 	```
-	dockergento start
-	dockergento mirror-host app dev generated pub var
+	mage start
+	mage mirror-host app dev generated pub var
 	```
 
 4. If you are editing code in `app`, you need to start unison watcher to sync files between host and container.
 
 	```
-	dockergento watch app/code/Magento/<module_name>
+	mage watch app/code/Magento/<module_name>
 	```
     
 </details>
@@ -164,7 +160,7 @@ dockergento create-project
 ```
 git clone https://github.com/magento/magento2.git
 cd magento2
-dockergento setup
+mage setup
 ```
 
 ---
@@ -174,8 +170,8 @@ dockergento setup
 ### Start Application
 
 ```
-dockergento start
-dockergento composer install
+mage start
+mage composer install
 sudo vim /etc/hosts
 // Add -> 127.0.0.1 <your-domain>
 ```
@@ -184,7 +180,7 @@ Open `http://<your-domain>` in the browser 🎉
 
 ### Workflow
 
-See detailed documentation about development workflow with dockergento
+See detailed documentation about development workflow with MageDocker
 
 * [Development Workflow](docs/workflow.md)
 
@@ -210,15 +206,8 @@ See detailed documentation about development workflow with dockergento
 
 ## Developers
 
-* [Juan Alonso](https://github.com/jalogut)
-* [Daniel Lozano](https://github.com/danielozano)
-* [Contributors](https://github.com/ModestCoders/magento2-dockergento/graphs/contributors)
-
-## Donations 🙏
-
-We’ve worked very hard to implement this tool. If you find it useful and want to invite us for a beer, just click on the donation button. Thanks! 🍺 
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](juan.jalogut@gmail.com)
+* [Ruslan Dovnar](https://github.com/Kybik911)
+* Based on [Dockergento](https://github.com/ModestCoders/magento2-dockergento)
 
 ## Resources
 
@@ -233,4 +222,4 @@ This project has been possible thanks to the following resources:
 * [GNU General Public License, version 3 (GPLv3)](http://opensource.org/licenses/gpl-3.0)
 
 ## Copyright
-(c) ModestCoders
+(c) Kybik911
