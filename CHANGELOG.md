@@ -7,4 +7,4 @@ and this project adheres to [Semantic Version](http://semver.org/spec/v2.0.0.htm
 ## [1.1] - 24-08-2018
 ### Changed
 
-* Created project based on `Magedocker`
+* Created project based on `Dockergento`
