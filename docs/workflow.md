@@ -1,17 +1,17 @@
 # Workflow
 
-The following guide shows you the normal development workflow using dockergento.
+The following guide shows you the normal development workflow using magedocker.
 
 #### 1. Start containers
 
 ```
-dockergento start
+mage start
 ```
 	
 #### 2. Install/update dependecies with composer
 
 ```
-dockergento composer <install/update>
+mage composer <install/update>
 ```
 
 #### 3. Develop code normally inside `magento/app`
@@ -19,14 +19,14 @@ dockergento composer <install/update>
 While developing you might need to execute magento commands like `cache:flush` for example
 
 ```
-dockergento magento <command>
+mage magento <command>
 ```
 
 #### 4. Working on frontend
 
 ```
-dockergento grunt exec:<theme>
-dockergento grunt watch
+mage grunt exec:<theme>
+mage grunt watch
 ```
 
 **NOTE:** You might also need to disable your browser cache. For example in Chrome:
@@ -38,7 +38,7 @@ dockergento grunt watch
 If you are developing code in a vendor module, you need to start unison watcher to sync files between host and container.
 
 ```
-dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name>
+mage watch <magento_dir>/vendor/<vendor_name>/<module_name>
 ```
 
 #### 6. xdebug
@@ -46,7 +46,7 @@ dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name>
 * Enable xdebug
 
 	```
-	dockergento debug-on
+	mage debug-on
 	```
 		
 * Configure xdebug in PHPStorm (Only first time)
@@ -58,13 +58,13 @@ dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name>
 	Because this folder is not binded for performance reasons, you need to sync it manually, so debugger finds the code in your host.
 
 	```
-	dockergento mirror-container generated
+	mage mirror-container generated
 	```
 		
 	If you edit vendor files while debugging, you have to manually transfer the files into the container
 		
 	```
-	dockergento mirror-host vendor/<subfolder_path>
+	mage mirror-host vendor/<subfolder_path>
 	```
 		
 * Disable xdebug when finish 
@@ -72,7 +72,7 @@ dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name>
 	Environment is 10x slower when xdebug is enabled!
 
 	```
-	dockergento debug-off
+	mage debug-off
 	```
  
 #### 7. Execute tests
@@ -80,13 +80,13 @@ dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name>
 * All tests
 
 	```
-	dockergento test-unit
-	dockergento test-integration
+	mage test-unit
+	mage test-integration
 	```
 	
 * Only specific files
 
 	```
-	dockergento test-unit <test-file-path>
-	dockergento test-integration <test-file-path>
+	mage test-unit <test-file-path>
+	mage test-integration <test-file-path>
 	```

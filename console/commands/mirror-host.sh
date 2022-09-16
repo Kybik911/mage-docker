@@ -7,7 +7,7 @@ usage()
     echo "  mirror-host [path1] ... [pathN]"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento mirror-host vendor${COLOR_RESET}\n"
+    printf "  ${GREEN}mage mirror-host vendor${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0 ] || [ "$1" == "--help" ]; then

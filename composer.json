@@ -1,22 +1,22 @@
 {
-  "name": "modestcoders/magento2-dockergento",
-  "description": "Commands to help you using magento2-dockergento",
+  "name": "kybik911/magento2-magedocker",
+  "description": "Commands to help you using magento2-magedocker",
   "keywords": [
     "magento2",
     "docker",
-    "dockergento",
+    "magedocker",
     "environment"
   ],
   "type": "library",
   "authors": [
     {
-      "name": "Juan Alonso",
-      "email": "juan.jalogut@gmail.com"
+      "name": "Ruslan Dovnar",
+      "email": "ruslan.dovnar@gmail.com"
     },
     {
       "name": "Daniel Lozano",
       "email": "dn.lozano.m@gmail.com"
     }
   ],
-  "bin": ["bin/dockergento"]
+  "bin": ["bin/mage"]
 }

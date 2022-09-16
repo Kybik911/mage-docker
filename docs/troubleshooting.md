@@ -4,7 +4,7 @@
 
 #### Problem
 
-`dockergento watch` seems to do nothing
+`mage watch` seems to do nothing
 
 #### Reason 
 
@@ -15,7 +15,7 @@ Sometimes the unison watcher might not work due to problems with `inotify` in Do
 Restart the docker daemon and try it again.
 
 ```
-dockergento watch <magento_dir>/vendor/<vendor_name>/<module_name> 
+mage watch <magento_dir>/vendor/<vendor_name>/<module_name> 
 ```
 
 ## (Exception): Composer file not found
@@ -35,5 +35,5 @@ Sometimes changing git branches might break bind paths like composer file for ex
 #### Solution
 
 ```
-dockergento restart
+mage restart
 ```

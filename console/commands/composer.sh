@@ -31,9 +31,9 @@ sync_all_from_container_to_host()
 }
 
 if [[ "$#" != 0 && "$1" == "create-project" ]]; then
-    printf "${RED}create-project is not compatible with dockergento. Please use:${COLOR_RESET}\n"
+    printf "${RED}create-project is not compatible with magedocker. Please use:${COLOR_RESET}\n"
         echo ""
-        echo "  dockergento create-project"
+        echo "  mage create-project"
         echo ""
         exit 1
 fi
@@ -44,7 +44,7 @@ if [[ "$#" != 0 \
         || $@ == "-d "* || $@ == "-d="*  \
         || $@ == *" --working-dir "* || $@ == *" --working-dir="*   \
         || $@ == "--working-dir "* || $@ == "--working-dir="* ) ]]; then
-     printf "${RED}Composer directory option not compatible with dockergento. This option is automatically set: ${COLOR_RESET}\n"
+     printf "${RED}Composer directory option not compatible with magedocker. This option is automatically set: ${COLOR_RESET}\n"
      echo ""
      echo "    --working-dir=${COMPOSER_DIR}"
      echo ""

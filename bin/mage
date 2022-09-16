@@ -16,7 +16,7 @@ resolve_absolute_dir()
 init_dirs()
 {
     resolve_absolute_dir
-    export DOCKERGENTO_DIR="${ABSOLUTE_PATH}"
+    export MAGEDOCKER_DIR="${ABSOLUTE_PATH}"
     export COMMANDS_DIR="${ABSOLUTE_PATH}/console/commands"
     export TASKS_DIR="${ABSOLUTE_PATH}/console/tasks"
     export PROPERTIES_DIR="${ABSOLUTE_PATH}/console/properties"
@@ -32,7 +32,7 @@ usage()
     printf "  ${GREEN}-T${COLOR_RESET}        Disable pseudo-tty allocation\n"
     echo ""
     printf "${YELLOW}Commands Help:${COLOR_RESET}\n"
-    printf "  ${GREEN}dockergento <command> --help${COLOR_RESET}    Display help for a specific command\n"
+    printf "  ${GREEN}mage <command> --help${COLOR_RESET}    Display help for a specific command\n"
     echo ""
     printf "${YELLOW}Available commands:${COLOR_RESET}\n"
 	COMMANDS_OUTPUT=""
@@ -66,7 +66,7 @@ fi
 COMMAND_NAME="$1.sh"
 if [ ! -f ${COMMANDS_DIR}/${COMMAND_NAME} ]; then
     printf "${RED}Command not found${COLOR_RESET}\n"
-    printf " Execute ${GREEN}dockergento --help${COLOR_RESET} to see commands available\n"
+    printf " Execute ${GREEN}mage --help${COLOR_RESET} to see commands available\n"
     exit 1
 fi
 

@@ -2,7 +2,7 @@
 
 Starting in Magento 2.4 Elastic Search is required:
 ```
-dockergento magento setup:install \
+mage magento setup:install \
   --db-host=db \
   --db-name=magento \
   --db-user=magento \
@@ -26,7 +26,7 @@ dockergento magento setup:install \
 
 For Magento 2.3 installations and below the following will still work:
 ```
-dockergento magento setup:install \
+mage magento setup:install \
   --db-host=db \
   --db-name=magento \
   --db-user=magento \
@@ -45,5 +45,5 @@ dockergento magento setup:install \
 ```
 
 ```
-dockergento magento deploy:mode:set developer
+mage magento deploy:mode:set developer
 ```

@@ -9,7 +9,7 @@ Copy provided `grumphp` templates into your project
 * See [config/grumphp/hooks](../config/grumphp/hooks)
 
 ```
-cp magento2-dockergento/config/grumphp/hooks <your_project>/config/grumphp/hooks
+cp magento2-magedocker/config/grumphp/hooks <your_project>/config/grumphp/hooks
 ```
 
 #### 2. Overwrite default ones

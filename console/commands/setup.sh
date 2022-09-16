@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOCKERGENTO_CONFIG_DIR="config/dockergento"
+MAGEDOCKER_CONFIG_DIR="config/magedocker"
 
 copy_with_consent()
 {
@@ -40,12 +40,12 @@ sed_in_file()
     fi
 }
 
-printf "${GREEN}Setting up dockergento config files${COLOR_RESET}\n"
-copy_with_consent "${DOCKERGENTO_DIR}/${DOCKERGENTO_CONFIG_DIR}/" "${DOCKERGENTO_CONFIG_DIR}"
-copy_with_consent "${DOCKERGENTO_DIR}/docker-compose/docker-compose.sample.yml" "${DOCKER_COMPOSE_FILE}"
-copy_with_consent "${DOCKERGENTO_DIR}/docker-compose/docker-compose.dev.linux.sample.yml" "${DOCKER_COMPOSE_FILE_LINUX}"
-copy_with_consent "${DOCKERGENTO_DIR}/docker-compose/docker-compose.dev.mac.sample.yml" "${DOCKER_COMPOSE_FILE_MAC}"
-#copy_with_consent "${DOCKERGENTO_DIR}/docker-compose/docker-compose.dev.windows.sample.yml" "${DOCKER_COMPOSE_FILE_WINDOWS}"
+printf "${GREEN}Setting up magedocker config files${COLOR_RESET}\n"
+copy_with_consent "${MAGEDOCKER_DIR}/${MAGEDOCKER_CONFIG_DIR}/" "${MAGEDOCKER_CONFIG_DIR}"
+copy_with_consent "${MAGEDOCKER_DIR}/docker-compose/docker-compose.sample.yml" "${DOCKER_COMPOSE_FILE}"
+copy_with_consent "${MAGEDOCKER_DIR}/docker-compose/docker-compose.dev.linux.sample.yml" "${DOCKER_COMPOSE_FILE_LINUX}"
+copy_with_consent "${MAGEDOCKER_DIR}/docker-compose/docker-compose.dev.mac.sample.yml" "${DOCKER_COMPOSE_FILE_MAC}"
+#copy_with_consent "${MAGEDOCKER_DIR}/docker-compose/docker-compose.dev.windows.sample.yml" "${DOCKER_COMPOSE_FILE_WINDOWS}"
 
 read -p "Magento root dir: [${MAGENTO_DIR}] " ANSWER_MAGENTO_DIR
 MAGENTO_DIR=${ANSWER_MAGENTO_DIR:-${MAGENTO_DIR}}
@@ -66,8 +66,8 @@ if [ "${MAGENTO_DIR}" != "." ]; then
 #	sed_in_file "s#/html/app#/html/${MAGENTO_DIR}/app#gw /dev/stdout" "${DOCKER_COMPOSE_FILE_WINDOWS}"
 #	sed_in_file "s#/vendor#/${MAGENTO_DIR}/vendor#gw /dev/stdout" "${DOCKER_COMPOSE_FILE_WINDOWS}"
 #    echo "--------------------"
-    echo "------ ${DOCKERGENTO_CONFIG_DIR}/nginx/conf/default.conf ------"
-    sed_in_file "s#/var/www/html#/var/www/html/${MAGENTO_DIR}#gw /dev/stdout" "${DOCKERGENTO_CONFIG_DIR}/nginx/conf/default.conf"
+    echo "------ ${MAGEDOCKER_CONFIG_DIR}/nginx/conf/default.conf ------"
+    sed_in_file "s#/var/www/html#/var/www/html/${MAGENTO_DIR}#gw /dev/stdout" "${MAGEDOCKER_CONFIG_DIR}/nginx/conf/default.conf"
     echo "--------------------"
     printf "${COLOR_RESET}"
 fi
@@ -184,8 +184,8 @@ if [[ ! -z "${PROJECT_NAME}" ]];then
     COMPOSE_PROJECT_NAME="${PROJECT_NAME}"
 fi
 
-printf "${GREEN}Saving custom properties file: '${DOCKERGENTO_CONFIG_DIR}/properties'${COLOR_RESET}\n"
-cat << EOF > ./${DOCKERGENTO_CONFIG_DIR}/properties
+printf "${GREEN}Saving custom properties file: '${MAGEDOCKER_CONFIG_DIR}/properties'${COLOR_RESET}\n"
+cat << EOF > ./${MAGEDOCKER_CONFIG_DIR}/properties
 MAGENTO_DIR="${MAGENTO_DIR}"
 COMPOSER_DIR="${COMPOSER_DIR}"
 BIN_DIR="${BIN_DIR}"
@@ -209,5 +209,5 @@ echo ""
 printf "${YELLOW}-------------------------------------${COLOR_RESET}\n"
 
 echo ""
-printf "${GREEN}Dockergento set up successfully!${COLOR_RESET}\n"
+printf "${GREEN}magedocker set up successfully!${COLOR_RESET}\n"
 echo ""

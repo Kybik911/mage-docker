@@ -11,7 +11,7 @@ if [[ "${MACHINE}" == "mac" || "${MACHINE}" == "windows" ]]; then
         echo "      - ./<host_path>:${BIND_MOUNT_PATH}"
         echo ""
         echo "  2. Execute:"
-        echo "      dockergento rebuild"
+        echo "      mage rebuild"
         echo ""
         exit 1
     fi

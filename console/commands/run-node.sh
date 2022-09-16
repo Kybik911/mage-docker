@@ -7,7 +7,7 @@ usage()
     echo "  exec-node command"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento run-node ls -lah${COLOR_RESET}\n"
+    printf "  ${GREEN}mage run-node ls -lah${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0  ] || [ "$1" == "--help" ]; then

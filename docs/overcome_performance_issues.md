@@ -30,8 +30,8 @@ As a work-around for this behavior, you can put vendor or third-party library di
 
 Even if not synchronised, it is needed to have magento and `vendor` code in your host. Not only for developing but also for xdebug.
 
-To sync that code seamlessly, dockergento uses `docker cp` automatically when you execute relevant commands like `dockergento composer`, so you do not need to care about that.
+To sync that code seamlessly, magedocker uses `docker cp` automatically when you execute relevant commands like `mage composer`, so you do not need to care about that.
 
 On the other hand, for those that implement modules inside vendor, we also provide a `unison` container that watches and syncs changes in background when you develop inside vendor.
 
-See [dockergento workflow](./workflow.md) for a better understanding about whole development process with dockergento.
+See [magedocker workflow](./workflow.md) for a better understanding about whole development process with magedocker.

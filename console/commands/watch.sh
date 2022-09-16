@@ -7,7 +7,7 @@ usage()
     echo "  watch [path1] ... [pathN]"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento watch vendor/namespace/<module-to-watch>${COLOR_RESET}\n"
+    printf "  ${GREEN}mage watch vendor/namespace/<module-to-watch>${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0 ] || [ "$1" == "--help" ]; then

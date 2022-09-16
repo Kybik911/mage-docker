@@ -7,7 +7,7 @@ usage()
     echo "  grunt command"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento grunt exec:<theme>${COLOR_RESET}\n"
+    printf "  ${GREEN}mage grunt exec:<theme>${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0 ] || [ "$1" == "--help" ]; then

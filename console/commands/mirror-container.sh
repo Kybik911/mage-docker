@@ -15,7 +15,7 @@ usage()
     printf "  ${GREEN}-f, --force${COLOR_RESET}     Do not ask confirmation to remove host destination\n"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento mirror-container generated${COLOR_RESET}\n"
+    printf "  ${GREEN}mage mirror-container generated${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0 ] || [ "$1" == "--help" ]; then

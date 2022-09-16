@@ -7,7 +7,7 @@ usage()
     echo "  magento-urn-generate <path>"
     echo ""
     echo "Example:"
-    printf "  ${GREEN}dockergento magento-urn-generate .idea/misc.xml${COLOR_RESET}\n"
+    printf "  ${GREEN}mage magento-urn-generate .idea/misc.xml${COLOR_RESET}\n"
 }
 
 if [ "$#" == 0 ] || [ "$1" == "--help" ]; then

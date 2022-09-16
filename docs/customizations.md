@@ -48,28 +48,28 @@ There are some properties that can be customised if your project setup differs f
 
 ### Custom properties paths
 
-* `<PROJECT_ROOT>/config/dockergento/properties`
-* `<PROJECT_ROOT>/../config/dockergento/properties`
-* `<PROJECT_ROOT>/../../config/dockergento/properties`
+* `<PROJECT_ROOT>/config/magedocker/properties`
+* `<PROJECT_ROOT>/../config/magedocker/properties`
+* `<PROJECT_ROOT>/../../config/magedocker/properties`
 
 ### Default properties
 
 Default list of properties that can be customised:
 
-* See [console/properties/dockergento_properties](../console/properties/dockergento_properties)
+* See [console/properties/magedocker_properties](../console/properties/magedocker_properties)
 
 ### Examples
 
 * If you have the magento code in a subfolder called for example `magento`. 
 
 	```
-	# <PROJECT_ROOT>/config/dockergento/properties
+	# <PROJECT_ROOT>/config/magedocker/properties
 	MAGENTO_DIR="magento"
 	```
 	
 * if your magento version is `<=2.1`
 
 	```
-	# <PROJECT_ROOT>/config/dockergento/properties
+	# <PROJECT_ROOT>/config/magedocker/properties
     GENERATED_DIR="var/generation"
 	```
