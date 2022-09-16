@@ -49,6 +49,17 @@ services:
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
 
+  redis:
+    image: ruslandovnar/redis:7.0
+    ports:
+      - 6379:6379
+    volumes: *appvolumes
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    depends_on:
+      - phpfpm
 volumes:
   dbdata:
   sockdata:
