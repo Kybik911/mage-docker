@@ -84,13 +84,13 @@ Follow the installation steps for your system.
 1. Clone this repo
 
     ```
-    git clone https://github.com/ModestCoders/magento2-dockergento.git
+    git clone https://github.com/RusDovOnilab/dockergento-upd.git
     ```
 
 2. Add `dockergento` bin into your `$PATH`
 
     ```
-    sudo ln -s $(pwd)/magento2-dockergento/bin/dockergento /usr/local/bin/
+    sudo ln -s $(pwd)/dockergento-upd/bin/dockergento /usr/local/bin/
     ```
     
 3. Open a new terminal tab/window and check that `dockergento` works
